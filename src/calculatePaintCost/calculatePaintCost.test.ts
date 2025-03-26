@@ -11,7 +11,13 @@ describe('calculatePaintCost', () => {
     expect(calculatePaintCost(0, 5)).toBe(0);
   });
 
-  test('Verify that calculatePaintCost should return 0 when cost per liter is 0', () => {
+  it('Verify that calculatePaintCost should return 0 when cost per liter is 0', () => {
     expect(calculatePaintCost(10, 0)).toBe(0);
+  });
+
+  it('Verify that calculatePaintCost should handle negative values correctly', () => {
+    expect(calculatePaintCost(-10, 5)).toBe(-50); 
+    expect(calculatePaintCost(10, -5)).toBe(-50); 
+    expect(calculatePaintCost(-10, -5)).toBe(50); 
   });
 });
