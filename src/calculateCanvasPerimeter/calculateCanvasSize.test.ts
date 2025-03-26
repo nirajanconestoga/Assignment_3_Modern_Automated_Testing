@@ -1,9 +1,8 @@
 import calculateCanvasSize from "./calculateCanvasSize";
 
 describe("calculateCanvasSize", () => {
-  test("returns correct result", () => {
+  it("Verify that calculateCanvasSize should return the correct canvas size for positive length and width", () => {
     const result = calculateCanvasSize("10", "100");
-
-    expect(result).toEqual(1000);
-  })
+    expect(result).toEqual(220);
+  });
 });
