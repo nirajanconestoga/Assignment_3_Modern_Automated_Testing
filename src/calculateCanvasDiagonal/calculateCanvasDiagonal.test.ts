@@ -10,4 +10,7 @@ describe('calculateCanvasDiagonal', () => {
   it('Verify that calculateCanvasSize should handle negative length correctly (absolute value)', () => {
     expect(calculateCanvasDiagonal('-3', '4')).toBe(2);
   });
+  it('Verify that calculateCanvasSize should handle non-numeric length by returning NaN', () => {
+    expect(calculateCanvasDiagonal('a', '4')).toBeNaN(); 
+  });
 });
