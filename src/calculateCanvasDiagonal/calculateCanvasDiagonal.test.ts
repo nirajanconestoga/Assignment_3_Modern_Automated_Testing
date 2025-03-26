@@ -8,7 +8,7 @@ describe('calculateCanvasDiagonal', () => {
     expect(calculateCanvasDiagonal('0', '4')).toBe(4);
   });
   it('Verify that calculateCanvasDiagonal should handle negative length correctly when calculating diagonal', () => {
-    expect(calculateCanvasDiagonal('-3', '4')).toBe(2);
+    expect(calculateCanvasDiagonal('-3', '4')).toBe(5);
   });
   it('Verify that calculateCanvasDiagonal should return NaN when non-numeric length is provided', () => {
     expect(calculateCanvasDiagonal('a', '4')).toBeNaN(); 
