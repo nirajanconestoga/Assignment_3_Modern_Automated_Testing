@@ -17,4 +17,8 @@ describe("calculateCanvasSize", () => {
     const result = calculateCanvasSize("a", "10");
     expect(result).toBeNaN();
   });
+  it("Verify that calculateCanvasSize should handle decimal length and width correctly", () => {
+    const result = calculateCanvasSize("1.5", "2.5");
+    expect(result).toEqual(8);
+  });
 });
