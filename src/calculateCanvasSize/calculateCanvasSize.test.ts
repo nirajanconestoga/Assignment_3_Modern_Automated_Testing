@@ -6,4 +6,9 @@ describe("calculateCanvasSize", () => {
     expect(result).toEqual(1000);
   });
 
+  it ("Verify that calculateCanvasSize should return 0 when both length and width are zero", () => {
+    const result = calculateCanvasSize("0", "0");
+    expect(result).toEqual(0);
+  });
+
 });
