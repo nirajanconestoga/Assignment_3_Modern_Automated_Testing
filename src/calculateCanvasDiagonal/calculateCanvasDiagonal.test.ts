@@ -13,4 +13,7 @@ describe('calculateCanvasDiagonal', () => {
   it('Verify that calculateCanvasSize should handle non-numeric length by returning NaN', () => {
     expect(calculateCanvasDiagonal('a', '4')).toBeNaN(); 
   });
+  it('Verify that calculateCanvasSize should handle decimal length correctly', () => {
+    expect(calculateCanvasDiagonal('1.5', '2')).toBeCloseTo(7, 2);
+  });
 });
