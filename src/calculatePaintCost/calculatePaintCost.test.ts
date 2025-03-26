@@ -15,9 +15,9 @@ describe('calculatePaintCost', () => {
     expect(calculatePaintCost(10, 0)).toBe(0);
   });
 
-  it('Verify that calculatePaintCost should handle negative values correctly', () => {
-    expect(calculatePaintCost(-10, 5)).toBe(-50); 
-    expect(calculatePaintCost(10, -5)).toBe(-50); 
-    expect(calculatePaintCost(-10, -5)).toBe(50); 
+  it('Verify that calculatePaintCost should return a validation message when paint required or cost per liter is negative', () => {
+    expect(calculatePaintCost(-10, 5)).toBe("Error: Paint required and cost per liter must be non-negative.");
+    expect(calculatePaintCost(10, -5)).toBe("Error: Paint required and cost per liter must be non-negative.");
+    expect(calculatePaintCost(-10, -5)).toBe("Error: Paint required and cost per liter must be non-negative.");
   });
 });
