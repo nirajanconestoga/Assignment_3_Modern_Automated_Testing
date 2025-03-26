@@ -7,4 +7,7 @@ describe('calculateCanvasDiagonal', () => {
   test('Verify that calculateCanvasSize should calculate perimeter correctly when length is zero and width is positive', () => {
     expect(calculateCanvasDiagonal('0', '4')).toBe(8); // 2 * (0 + 4) = 8
   });
+  it('Verify that calculateCanvasSize should handle negative length correctly (absolute value)', () => {
+    expect(calculateCanvasDiagonal('-3', '4')).toBe(2);
+  });
 });
