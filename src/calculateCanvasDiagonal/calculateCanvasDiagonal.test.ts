@@ -14,6 +14,6 @@ describe('calculateCanvasDiagonal', () => {
     expect(calculateCanvasDiagonal('a', '4')).toBeNaN(); 
   });
   it('Verify that calculateCanvasDiagonal should handle decimal length correctly when calculating diagonal', () => {
-    expect(calculateCanvasDiagonal('1.5', '2')).toBeCloseTo(7, 2);
+    expect(calculateCanvasDiagonal('1.5', '2')).toBeCloseTo(2.5, 2);
   });
 });
