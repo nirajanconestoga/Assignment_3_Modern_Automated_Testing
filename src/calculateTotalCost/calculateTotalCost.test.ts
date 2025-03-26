@@ -17,5 +17,7 @@ describe('calculateTotalCost', () => {
     expect(calculateTotalCost(100, -50)).toBe("Error: Paint cost and labor cost must be non-negative.");
     expect(calculateTotalCost(-100, -50)).toBe("Error: Paint cost and labor cost must be non-negative.");
   });
-  
+  it('Verify that calculateTotalCost should return 0 when both costs are 0', () => {
+    expect(calculateTotalCost(0, 0)).toBe(0); // 0 + 0 = 0
+  });
 });
